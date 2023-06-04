@@ -1,0 +1,100 @@
+.my-learn-container{
+    margin-top: 50px;
+    font-weight: bold;
+}
+.my-learns{
+    margin-top:30px ;
+    /* background-color: aqua; */
+    height: auto;
+}
+.workcontainer{
+    grid-template-columns: repeat(3,2fr);
+    gap: 1.5rem;
+}
+.workcard{
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+.workcard:hover .work__mask{
+    opacity: 0.9;
+}
+.workcategory{
+color: #fff;
+background-color: var(--first-color);
+border-bottom-left-radius: 0.98rem;
+border-top-right-radius: 0.98rem;
+position: absolute;
+top: 0;
+left:1.5rem;
+font-size: var(--small-font-size);
+display: inline-block;
+padding: 0.19rem 0.625rem;
+transform: translateY(-40px);
+transition: .3s;
+}
+.workbutton{
+    color: #fff;
+    position: absolute;
+    /* width: 100vh; */
+    cursor: pointer;
+    /* display: flex; */
+    /* background-color: #6c6ce5; */
+    /* background-color: antiquewhite; */
+    bottom: 1.2rem;
+    left: 0.1rem;
+
+    font-size: var(--h3-font-size);
+    display:flex;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    /* background-color: #ffd15c; */
+    height: 30px;
+    width: 400px;
+    /* gap: 20px; */
+    display: flex;
+    justify-content: space-between;
+    /* border-radius: 50%; */
+    /* text-align: center; */
+    line-height: 42px;
+    transition: .3s;
+    opacity: 0;
+}
+.worktitle{   
+    color: #fff;
+font-size: var(--h3-font-size);
+margin: 0 0 0.98rem;
+padding: 0 1.25rem;
+position: absolute;
+top: 3.25rem;
+
+transform: translateY(30px);
+transition:  .3s;
+opacity: 0;} 
+
+
+.workcard:hover .workbutton{
+    opacity: 1; 
+}
+.workcard:hover .worktitle,
+.workcard:hover .workcategory
+{
+    opacity: 1; 
+    transform: translateY(0);
+}
+@media screen and (max-width:1024px){
+    /* .work_filters{
+        justify-content: center;
+    } */
+    .workcontainer{
+        grid-template-columns: repeat(2,330px);
+        justify-content: center;
+        row-gap: 1.875rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .workcontainer{
+        grid-template-columns: 310px;
+    }
+}
